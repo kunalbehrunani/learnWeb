@@ -1,0 +1,18 @@
+Resources - Any entitiy on Web eg. HTML pages, stylesheets, JS files, JSONs, Images, videos etc. 
+
+Protocol - Rules and procedures involved in the communication of data.
+
+HTTP - Hypertext transfer protocol - This is what facilitates the request response cycle between client (browser) and server. This is what allowing me to view any particular resource from the web on my browser.
+
+How it does? By establishing a channel - Transmission Control Protocol (TCP). This is channel through which the request response cycle is carried on. 
+
+HTTP - it is the **language** that both - the client as well as the browser must understand so that they can communicate via request response cycles through this TCP Channel. 
+
+URL - Uniform Resource Locater - Address of any given web resource in the web server.
+
+Whenever we type in a address (URL), first A TCP channel/connection is established. Then through the URL, in most cases, an HTTP GET Request is made to the server to fetch any given web resource. For every given request, a new/fresh TCP channel is established everytime (as per HTTP 1.0 - Latest, we have HTTP 1.1 which uses one connection for several request)
+
+Types of HTTP Methods - GET(fetch), POST(Add new resource/info to Web server), PUT(update the existing), DELETE(delete web resources)
+
+What happens when we type any URL in our browser address bar?
+=> the http part is extracted. This tells us which network protocol to establish. (the other option can be https, where s stands for secure. This means that all communication of data will be done in encryption mode). Then the domain name is extracted and IP address of that domain name server is searched. If successful, a connection using the network protocol (http, https etc) is established and the GET/POST etc whichever request is rendered. If successful, the server might respond with the header (meaning, the status code {200, 201...etc}, status code description {OK.etc}, and the content-type {which can the info that we requested eg. text/html, text/css etc}. If not, it might respond with the header with status code as 404 - Not found or any other valid status code. 
